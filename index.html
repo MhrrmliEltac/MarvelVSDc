@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Selection</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="marvel-hero">
+        <div class="head">
+          <p>Marvel Heroes</p>
+        </div>
+        <img
+          class="iron-man hero"
+          src="./img/main-qimg-6b2fbb11ab91a68e86233b.png"
+          alt="Iron Man"
+        />
+        <img
+          class="hulk hero"
+          src="./img/main-qimg-9f35247e1ffbbd3e161a6b.png"
+          alt="Hulk"
+        />
+        <img
+          class="thor hero"
+          src="./img/main-qimg-7301aca683c1d0cbdf18e4.png"
+          alt="Thor"
+        />
+      </div>
+      <div class="dc-hero">
+        <div class="head">
+          <p>DC Heroes</p>
+        </div>
+        <img
+          class="hero superman"
+          src="./img/main-qimg-92b40443a7a4060ab097c4.png"
+          alt="Superman"
+        />
+        <img
+          class="hero wonder"
+          src="./img/main-qimg-5cc7b7cb4caf0cd0d6f56f.png"
+          alt="Wonder Woman"
+        />
+        <img
+          class="hero flash"
+          src="./img/main-qimg-cad4190475af30326b98f3.png"
+          alt="Flash"
+        />
+      </div>
+      <div style="display: flex;" class="choose-hero">
+        <div class="your-choose marvel-hero"></div>
+        <div class="enemy-choose marvel-hero"></div>
+      </div>
+      <button id="fight-btn">Fight</button>
+
+      <!-- Sonuç bölümü -->
+      <div id="result" style="display: none;">
+        <div class="results">
+          <div class="hero-container">
+            <div class="hero-box your-hero">
+              <h2>Your Hero</h2>
+              <img id="your-hero-img" src="" alt="Your Hero" />
+              <p id="your-hero-health">
+                Health: <span id="your-hero-health-value">100</span>
+              </p>
+              <div class="health-bar">
+                <div id="your-hero-health-bar"></div>
+              </div>
+            </div>
+            <div class="hero-box enemy-hero">
+              <h2>Enemy Hero</h2>
+              <img id="enemy-hero-img" src="" alt="Enemy Hero" />
+              <p id="enemy-hero-health">
+                Health: <span id="enemy-hero-health-value">100</span>
+              </p>
+              <div class="health-bar">
+                <div id="enemy-hero-health-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="fight-result">
+            <h2>Result</h2>
+            <p id="result-text">The fight is about to begin!</p>
+          </div>
+          <button class="reset" onclick="resetGame()">Back to Selection</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
